@@ -59,7 +59,7 @@ angular.module('copayApp.services')
 	root.pushNotificationsInit = function() {
 		if (!usePushNotifications) return;
 		
-		var device = require('byteballcore/device.js');
+		var device = require('wntcore/device.js');
 		device.readCorrespondents(function(devices){
 			if (devices.length == 0)
 				return;
@@ -93,6 +93,8 @@ angular.module('copayApp.services')
 	
 	function disable_notification() {
 		storageService.getPushInfo(function(err, pushInfo) {
+			if (err)
+				return $log.error('Error getting push info');
 			storageService.removePushInfo(function() {
 				var network = require('wntcore/network.js');
 				network.sendRequest(_ws, 'hub/disable_notification', pushInfo.registrationId, false, function(ws, request, response) {

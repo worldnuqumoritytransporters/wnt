@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: byteball\n"
+"Project-Id-Version: wnt\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
-"X-Crowdin-Project: byteball\n"
+"X-Crowdin-Project: wnt\n"
 "X-Crowdin-Language: nl\n"
 "X-Crowdin-File: /master/i18n/po/template.pot\n"
 "Last-Translator: testz <testzcrypto@gmail.com>\n"
@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "12 woorden, gescheiden door streepjes"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About World Nuqumority Transporters"
-msgstr "Over World Nuqumority Transporters"
+msgid "About Wnt"
+msgstr "Over Wnt"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9
@@ -125,8 +125,8 @@ msgid "All Wallet Addresses"
 msgstr "Allle Portefeuilles"
 
 #: public/views/translators.html:52
-msgid "All contributions to World Nuqumority Transporters's translation are welcome. Sign up at crowdin.com and join the World Nuqumority Transporters project at"
-msgstr "Alle bijdragen aan de vertaling van World Nuqumority Transporters zijn welkom. Meldt u aan bij crowdin.com en sluit u aan bij het World Nuqumority Transporters project op"
+msgid "All contributions to Wnt's translation are welcome. Sign up at crowdin.com and join the Wnt project at"
+msgstr "Alle bijdragen aan de vertaling van Wnt zijn welkom. Meldt u aan bij crowdin.com en sluit u aan bij het Wnt project op"
 
 #: public/views/modals/multi-payment.html:56
 msgid "Already Paid"
@@ -179,8 +179,8 @@ msgid "Asset"
 msgstr "Activa"
 
 #: public/views/walletHome.html:534
-msgid "Attest profile data linked to any World Nuqumority Transporters address."
-msgstr "Bevestig de profiel gegevens die aan een World Nuqumority Transporters adres zijn gekoppeld."
+msgid "Attest profile data linked to any Wnt address."
+msgstr "Bevestig de profiel gegevens die aan een Wnt adres zijn gekoppeld."
 
 #: public/views/walletHome.html:348
 msgid "Attestation"
@@ -283,12 +283,12 @@ msgid "Browser unsupported"
 msgstr "Browser niet ondersteund"
 
 #: public/index.html:12
-msgid "World Nuqumority Transporters &mdash; smart payments"
+msgid "Wnt &mdash; smart payments"
 msgstr ""
 
 #: public/views/modals/destination-address.html:119
-msgid "World Nuqumority Transporters address"
-msgstr "World Nuqumority Transporters adres"
+msgid "Wnt address"
+msgstr "Wnt adres"
 
 #: public/views/includes/password.html:24
 msgid "CANCEL"
@@ -490,8 +490,8 @@ msgid "Could not import. Check input file and password"
 msgstr "Importeren mislukt. Controleer het input bestand en het wachtwoord"
 
 #: src/js/controllers/walletHome.js:53
-msgid "Could not recognize a valid World Nuqumority Transporters QR Code"
-msgstr "Dit is geen geldige World Nuqumority Transporters QR code"
+msgid "Could not recognize a valid Wnt QR Code"
+msgstr "Dit is geen geldige Wnt QR code"
 
 #: src/js/controllers/walletHome.js:696
 msgid "Could not send payment"
@@ -639,8 +639,8 @@ msgid "Download CSV file"
 msgstr "Download CSV-bestand"
 
 #: public/views/splash.html:26
-msgid "Download the entire World Nuqumority Transporters database"
-msgstr "Gehele World Nuqumority Transporters-database downloaden"
+msgid "Download the entire Wnt database"
+msgstr "Gehele Wnt-database downloaden"
 
 #: public/views/correspondentDevice.html:26
 #: public/views/modals/destination-address.html:38
@@ -941,8 +941,8 @@ msgid "Multidevice Wallet"
 msgstr "Multi-device portefeuille"
 
 #: public/views/walletHome.html:255
-msgid "My World Nuqumority Transporters address"
-msgstr "Mijn World Nuqumority Transporters adres"
+msgid "My Wnt address"
+msgstr "Mijn Wnt adres"
 
 #: public/views/correspondentDevice.html:297
 msgid "My recording preference"
@@ -1123,8 +1123,8 @@ msgid "Port"
 msgstr "Poort"
 
 #: public/views/walletHome.html:540
-msgid "Post arbitrary key-value pairs of data into World Nuqumority Transporters network."
-msgstr "Post willekeurige sleutelwaarde-paren van gegevens in het World Nuqumority Transporters netwerk."
+msgid "Post arbitrary key-value pairs of data into Wnt network."
+msgstr "Post willekeurige sleutelwaarde-paren van gegevens in het Wnt netwerk."
 
 #: public/views/walletHome.html:531
 msgid "Post values into datafeeds manually, be an oracle."
@@ -1622,20 +1622,20 @@ msgid "To be able to restore everything, please create a full backup (find the o
 msgstr "Om alles te kunnen herstellen dient u een volledige backup te maken (zie de optie in het menu)"
 
 #: public/views/walletHome.html:597
-msgid "To be able to send arbitrary data into World Nuqumority Transporters network, please switch to a single-address wallet first or create one."
-msgstr "Om willekeurige data in het World Nuqumority Transporters netwerk te kunnen verzenden, dient u te wisselen naar een één adres portefeuille, of er een te creëren."
+msgid "To be able to send arbitrary data into Wnt network, please switch to a single-address wallet first or create one."
+msgstr "Om willekeurige data in het Wnt netwerk te kunnen verzenden, dient u te wisselen naar een één adres portefeuille, of er een te creëren."
 
 #: public/views/walletHome.html:449
 msgid "To bind the payment to a condition, please click the peer's address in chat"
 msgstr "Om betalingen aan een voorwaarde te verbinden klikt u op het adres van de wederpartij in de chat"
 
 #: public/views/walletHome.html:402
-msgid "To World Nuqumority Transporters address"
-msgstr "Naar World Nuqumority Transporters adres"
+msgid "To wnt address"
+msgstr "Naar Wnt adres"
 
 #: public/views/walletHome.html:394
-msgid "To byteball address or email"
-msgstr "Naar World Nuqumority Transporters adres of e-mailadres"
+msgid "To wnt address or email"
+msgstr "Naar Wnt adres of e-mailadres"
 
 #: src/js/controllers/index.js:1434
 msgid "To email"
@@ -1748,8 +1748,8 @@ msgid "WARNINGS:"
 msgstr "WAARSCHUWINGEN:"
 
 #: public/views/splash.html:53
-msgid "WELCOME TO World Nuqumority Token"
-msgstr "WELKOM BIJ World Nuqumority Token"
+msgid "WELCOME TO BYTEBALL"
+msgstr "WELKOM BIJ BYTEBALL"
 
 #: public/views/copayers.html:24
 msgid "Waiting for co-signers"
@@ -1785,8 +1785,8 @@ msgid "Wallet Name (at creation)"
 msgstr "Naam van de Portefeuille (ten tijde van aanmaken)"
 
 #: src/js/services/profileService.js:453
-msgid "Wallet already in World Nuqumority Transporters:"
-msgstr "Portefeuille bestaat reeds in World Nuqumority Transporters:"
+msgid "Wallet already in Wnt:"
+msgstr "Portefeuille bestaat reeds in Wnt:"
 
 #: public/views/create.html:48
 msgid "Wallet name"
@@ -2011,8 +2011,8 @@ msgid "or"
 msgstr "of"
 
 #: public/views/backup.html:24
-msgid "or backup all World Nuqumority Transporters data at"
-msgstr "of backup alle World Nuqumority Transporters data op"
+msgid "or backup all Wnt data at"
+msgstr "of backup alle Wnt data op"
 
 #: public/views/modals/offer-contract.html:51
 msgid "peer pays"

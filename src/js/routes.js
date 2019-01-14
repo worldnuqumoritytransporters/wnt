@@ -590,7 +590,7 @@ angular
         type: "menubar"
       });
       try {
-        nativeMenuBar.createMacBuiltin("Byteball");
+        nativeMenuBar.createMacBuiltin("Wnt");
       } catch (e) {
         $log.debug('This is not OSX');
       }

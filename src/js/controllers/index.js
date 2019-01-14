@@ -129,9 +129,9 @@ angular.module('copayApp.controllers').controller('indexController', function($r
 			return cb();
 		var db = require('wntcore/db.js');
 		db.query(
-			"SELECT int_value FROM unit_authors JOIN data_feeds USING(unit) \n\
-			WHERE address=? AND feed_name='timestamp' \n\
-			ORDER BY unit_authors.rowid DESC LIMIT 1",
+			"SELECT int_value FROM data_feeds CROSS JOIN unit_authors USING(unit) \n\
+			WHERE +address=? AND +feed_name='timestamp' \n\
+			ORDER BY data_feeds.rowid DESC LIMIT 1",
 			[configService.TIMESTAMPER_ADDRESS],
 			function(rows){
 				if (rows.length === 0)
@@ -992,7 +992,7 @@ angular.module('copayApp.controllers').controller('indexController', function($r
   self.updateColor = function() {
     var config = configService.getSync();
     config.colorFor = config.colorFor || {};
-    self.backgroundColor = config.colorFor[self.walletId] || '#abc1d8';
+    self.backgroundColor = config.colorFor[self.walletId] || '#4A90E2';
     var fc = profileService.focusedClient;
     fc.backgroundColor = self.backgroundColor;
   };
@@ -1185,7 +1185,7 @@ angular.module('copayApp.controllers').controller('indexController', function($r
           $log.debug('Wallet Transaction History:', txs);
 
           var data = txs;
-          var filename = 'Byteball-' + (self.alias || self.walletName) + '.csv';
+          var filename = 'Wnt-' + (self.alias || self.walletName) + '.csv';
           var csvContent = '';
 
           if (!isNode) csvContent = 'data:text/csv;charset=utf-8,';

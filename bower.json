@@ -1,5 +1,5 @@
 {
-  "name": "WNT",
+  "name": "wnt",
   "keywords": [
     "wnt",
     "wallet",
@@ -7,7 +7,7 @@
   ],
   "dependencies": {
     "angular": "1",
-    "angular-foundation": "byteball/angular-foundation",
+    "angular-foundation": "wnt/angular-foundation",
     "angular-gettext": "2",
     "angular-touch": "1",
     "angular-carousel": "*",
@@ -23,6 +23,8 @@
     "qrcode-decoder-js": "*",
     "angular-elastic": "2",
     "ui-router-extras": "0.1"
-
+  },
+  "resolutions": {
+    "angular": "1.6.10"
   }
 }

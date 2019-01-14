@@ -453,7 +453,7 @@ angular.module('copayApp.services')
         // check if exists
         var w = lodash.find(root.profile.credentials, { 'walletId': walletId });
         if (w)
-            return cb(gettext('Wallet already in WNT' + ": ") + w.walletName);
+            return cb(gettext('Wallet already in Wnt' + ": ") + w.walletName);
 
         root.profile.credentials.push(JSON.parse(walletClient.export()));
         root.setWalletClients();
@@ -731,7 +731,7 @@ angular.module('copayApp.services')
           name: config.aliasFor[c.walletId] || c.walletName,
           id: c.walletId,
           network: c.network,
-          color: config.colorFor[c.walletId] || '#abc1d8'
+          color: config.colorFor[c.walletId] || '#2C3E50'
         };
       });
       ret = lodash.filter(ret, function(w) {

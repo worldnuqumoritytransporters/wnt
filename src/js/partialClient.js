@@ -93,8 +93,8 @@ function initWallet() {
 
 	function setWalletNameAndColor(walletName) {
 		if(completeClientLoaded) return;
-		var color = root.config.colorFor ? root.config.colorFor[root.focusedClient.credentials.walletId] : '#abc1d8';
-		if(!color) color = '#abc1d8';
+		var color = root.config.colorFor ? root.config.colorFor[root.focusedClient.credentials.walletId] : '#4A90E2';
+		if(!color) color = '#4A90E2';
 		getFromId('name1Color').style.color = color;
 		getFromId('name1').innerHTML = walletName;
 		getFromId('name2').innerHTML = walletName;
@@ -136,7 +136,7 @@ function initWallet() {
 			var walletId = credentials.walletId;
 
 			html += '<li onclick="wallet.selectWallet(\'' + walletId + '\')" id="w' + walletId + '" class="nav-item ' + (walletId === selectedWalletId ? 'selected' : '') + '">' +
-				'<a class="oh"><div class="avatar-wallet " style="background-color: ' + (colors && colors[walletId] ? colors[walletId] : '#abc1d8') + '">' + credentials.walletName.substr(0, 1) + ' </div>' +
+				'<a class="oh"><div class="avatar-wallet " style="background-color: ' + (colors && colors[walletId] ? colors[walletId] : '#4A90E2') + '">' + credentials.walletName.substr(0, 1) + ' </div>' +
 				'<div class="name-wallet m8t">' + credentials.walletName + '</div></a></li>';
 		}
 
@@ -144,7 +144,7 @@ function initWallet() {
 	}
 
 	function loadCompleteClient(showClient) {
-		self._bByteballCoreLoaded = false; //"fix" : Looks like you are loading multiple copies of byteball core, which is not supported. Running 'npm dedupe' might help.
+		self._bWntCoreLoaded = false; //"fix" : Looks like you are loading multiple copies of wnt core, which is not supported. Running 'npm dedupe' might help.
 		var body = document.body;
 		var page = document.createElement('div');
 
@@ -152,10 +152,10 @@ function initWallet() {
 		var angularJs = document.createElement('script');
 		angularJs.src = 'angular.js';
 		angularJs.onload = function() {
-			var byteballJS = document.createElement('script');
-			byteballJS.src = 'byteball.js';
-			body.appendChild(byteballJS);
-			byteballJS.onload = function() {
+			var wntJS = document.createElement('script');
+			wntJS.src = 'wnt.js';
+			body.appendChild(wntJS);
+			wntJS.onload = function() {
 				if(showClient) showCompleteClient();
 			}
 		};

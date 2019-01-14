@@ -22,7 +22,7 @@ function isValidAddress(value) {
     return false;
   }
 
-  // byteball uri
+  // wnt uri
   var conf = require('wntcore/conf.js');
   var re = new RegExp('^'+conf.program+':([A-Z2-7]{32})\b', 'i');
   var arrMatches = value.match(re);
@@ -473,8 +473,8 @@ angular.module('copayApp.directives')
         $scope.logo_url = $scope.negative ? 'img/icons/icon-white-32.png' : 'img/icons/icon-black-32.png';
       },
       replace: true,
-      //template: '<img ng-src="{{ logo_url }}" alt="Byteball">'
-      template: '<div><img ng-src="{{ logo_url }}" alt="Byteball"><br>WNT</div>'
+      //template: '<img ng-src="{{ logo_url }}" alt="Wnt">'
+      template: '<div><img ng-src="{{ logo_url }}" alt="Wnt"><br>Wnt</div>'
     }
   })
   .directive('availableBalance', function() {

@@ -1,7 +1,7 @@
 
 /*
  *
- * Byteball mobile CSS
+ * Wnt mobile CSS
  *
  */
 
@@ -149,7 +149,7 @@ _:-ms-fullscreen, :root .main {
   bottom: 0;
   width: 100%;
   z-index: 5;
-  background: #abc1d8;
+  background: #2C3E50;
 }
 
 .second-bottom-bar {
@@ -242,7 +242,7 @@ ul.copayer-list img {
 }
 
 .bottombar-item a {
-  color: #3e5f82;
+  color: #9EA9B3;
   padding: 0.5rem 0;
   display: block;
   border-top: 3px solid #122232;
@@ -274,7 +274,7 @@ ul.copayer-list img {
 
 
 .right-small a, .left-small a {
-  color: #3e5f82;
+  color: #A5B2BF;
 }
 
 a.missing-copayers {
@@ -304,7 +304,7 @@ a.missing-copayers {
 }
 
 .sidebar {
-  background: #abc1d8;
+  background: #2C3E50;
 }
 
 .sidebar .icon {
@@ -317,15 +317,15 @@ a.missing-copayers {
 
 .sidebar li {
   overflow: hidden;
-  border-bottom: 1px solid rgb(79, 111, 146);
+  border-bottom: 1px solid #384B5F;
 }
 
 .sidebar li.nav-item.selected {
-  background-color: #1c4e80;
+  background-color: #122232;
 }
 
 .sidebar .avatar-wallet, .payment-uri .avatar-wallet, .modal-content .avatar-wallet {
-  background-color: #abc1d8;
+  background-color: #2C3E50;
   color: #fff;
   font-size: 1.4rem;
   font-weight: 700;
@@ -366,7 +366,7 @@ a.missing-copayers {
   font-size: 12px;
   font-weight: 300;
   border-bottom: transparent;
-  color: #3e5f82;
+  color: #A5B2BF;
   padding: 1rem 0.7rem;
 }
 
@@ -546,7 +546,7 @@ to prevent collapsing during animation*/
   top: 0px;
   z-index: 2000;
   opacity: 1.0 !important;
-  background-color: #abc1d8;
+  background-color: #2C3E50;
 }
 
 .dr-notification-wrapper.client-error {
@@ -556,8 +556,8 @@ to prevent collapsing during animation*/
 }
 
 .dr-notification-close-btn {
-  color: #3e5f82;
-  border: 1px solid #3e5f82;
+  color: #A5B2BF;
+  border: 1px solid #A5B2BF;
   border-radius: 100%;
   display: inline-block;
   padding: 0px 8px;
@@ -842,7 +842,7 @@ textarea:focus
 }
 
 .tab-container.selected a {
-  color: #abc1d8;
+  color: #2C3E50;
   font-weight: 600;
 }
 
@@ -936,7 +936,7 @@ input.inline.ng-dirty.ng-valid {
 touch-action: manipulation; /* IE11+ */
 
 #splash{
-  background-color: #abc1d8;
+  background-color: #283c4f;
   position: absolute;
   left: 0;
   top: 0;

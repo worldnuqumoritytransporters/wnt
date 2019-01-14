@@ -50,7 +50,7 @@ angular.module('copayApp.controllers')
 			if (form.address && form.address.$invalid && !self.blockUx) {
 				console.log("invalid address, resetting form");
 				self.resetForm();
-				self.error = gettext('Could not recognize a valid WNT QR Code');
+				self.error = gettext('Could not recognize a valid Wnt QR Code');
 			}*/
 		});
 
@@ -754,8 +754,8 @@ angular.module('copayApp.controllers')
 					is_private = assetInfo.is_private;
 			}
 			return {
-				message: "Here is your " + (is_private ? "file" : "link") + " to receive " + amount + " " + asset + usd_amount_str + (is_private ? ".  If you don't have a WNT wallet yet, install it from https://wnt.jp." : (": https://wnt.jp/#textcoin?" + mnemonic)),
-				subject: "WNT user beamed you money"
+				message: "Here is your " + (is_private ? "file" : "link") + " to receive " + amount + " " + asset + usd_amount_str + (is_private ? ".  If you don't have a Wnt wallet yet, install it from https://worldnuqumoritytransporters.com." : (": https://worldnuqumoritytransporters.com/#textcoin?" + mnemonic)),
+				subject: "Wnt user beamed you money"
 			}
 		}
 
@@ -1008,7 +1008,7 @@ angular.module('copayApp.controllers')
 						if (isTextcoin) {
 							delete self.current_payment_key;
 							indexScope.setOngoingProcess(gettext('sending'), false);
-							return self.setSendError("you can send bound payments to byteball adresses only");
+							return self.setSendError("you can send bound payments to wnt adresses only");
 						}
 						if (!recipient_device_address)
 							throw Error('recipient device address not known');
@@ -1191,7 +1191,7 @@ angular.module('copayApp.controllers')
 								if (binding && binding.reverseAmount) { // create a request for reverse payment
 									if (!my_address)
 										throw Error('my address not known');
-									var paymentRequestCode = 'byteball:' + my_address + '?amount=' + binding.reverseAmount + '&asset=' + encodeURIComponent(binding.reverseAsset);
+									var paymentRequestCode = 'wnt:' + my_address + '?amount=' + binding.reverseAmount + '&asset=' + encodeURIComponent(binding.reverseAsset);
 									var paymentRequestText = '[reverse payment](' + paymentRequestCode + ')';
 									device.sendMessageToDevice(recipient_device_address, 'text', paymentRequestText);
 									var body = correspondentListService.formatOutgoingMessage(paymentRequestText);
@@ -1548,8 +1548,10 @@ angular.module('copayApp.controllers')
 					var assetIndex = lodash.findIndex($scope.index.arrBalances, {
 						asset: asset
 					});
-					if (assetIndex < 0)
-						throw Error("failed to find asset index of asset " + asset);
+					if (assetIndex < 0) {
+						notification.error("failed to find asset index of asset " + asset);
+						return self.resetForm();
+					}
 					$scope.index.assetIndex = assetIndex;
 					this.lockAsset = true;
 				}
@@ -1680,7 +1682,7 @@ angular.module('copayApp.controllers')
 		};
 
 		this.getPrivatePayloadSavePath = function(cb) {
-			var fileName = 'WNTPayment-' + $filter('date')(Date.now(), 'yyyy-MM-dd-HH-mm-ss') + '.' + configService.privateTextcoinExt;
+			var fileName = 'WntPayment-' + $filter('date')(Date.now(), 'yyyy-MM-dd-HH-mm-ss') + '.' + configService.privateTextcoinExt;
 			if (!isCordova) {
 				var inputFile = document.createElement("input"); 
 				inputFile.type = "file";
@@ -1699,14 +1701,14 @@ angular.module('copayApp.controllers')
 			}
 			else {
 				var root = window.cordova.file.cacheDirectory;//isMobile.iOS() ? window.cordova.file.documentsDirectory : window.cordova.file.externalRootDirectory;
-				var path = 'WNT';
+				var path = 'Wnt';
 				cb(null, {root: root, path: path, fileName: fileName});
 			}
 		};
 
 		this.openInExplorer = function(unit) {
 			var testnet = home.isTestnet ? 'testnet' : '';
-			var url = 'https://' + testnet + 'explorer.wnt.jp/#' + unit;
+			var url = 'https://' + testnet + 'explorer.worldnuqumoritytransporters.com/#' + unit;
 			if (typeof nw !== 'undefined')
 				nw.Shell.openExternal(url);
 			else if (isCordova)

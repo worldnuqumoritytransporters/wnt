@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="org.byteball.wallet"
+<widget id="org.wnt.wallet"
   version="2.6.0"
   android-versionCode="1073"
   ios-CFBundleVersion="2.6.0" xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>WNT</name>
+    <name>Wnt</name>
     <description>
-      WNT wallet.
+      Wnt wallet.
     </description>
-    <author email="worldnuqumoritytoken@gmail.com" href="http://worldnuqumoritytoken.com/">
-        WNT
+    <author email="wnt@worldnuqumoritytransporters.com" href="https://worldnuqumoritytransporters.com">
+        Wnt
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -22,9 +22,9 @@
     <preference name="FadeSplashScreen" value="true" />  
     <preference name="FadeSplashScreenDuration" value="1000" />
     <preference name="SplashMaintainAspectRatio" value="true" />
-    <preference name="BackgroundColor" value="#899caf" />
+    <preference name="BackgroundColor" value="#2C3E50" />
     <preference name="StatusBarOverlaysWebView" value="false" />
-    <preference name="StatusBarBackgroundColor" value="#899caf" />
+    <preference name="StatusBarBackgroundColor" value="#2C3E50" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="BackupWebStorage" value="none"/>
     <preference name="windows-target-version" value="8.1"/>
@@ -85,15 +85,15 @@
 				        <string>public.data</string>
 				    </array>
 				    <key>UTTypeDescription</key>
-				    <string>WNT Private Coin</string>
+				    <string>Wnt Private Coin</string>
 				    <key>UTTypeIdentifier</key>
-				    <string>org.byteball.coin</string>
+				    <string>org.wnt.coin</string>
 				    <key>UTTypeTagSpecification</key>
 				    <dict>
 				        <key>public.filename-extension</key>
 				        <string>coin</string>
 				        <key>public.mime-type</key>
-				        <string>application/x-byteball</string>
+				        <string>application/x-wnt</string>
 				    </dict>
 				</dict>
 				</array>
@@ -102,15 +102,18 @@
 	    	<array>
 			    <dict>
 			        <key>CFBundleTypeName</key>
-			        <string>WNT Private Coin</string>
+			        <string>Wnt Private Coin</string>
 			        <key>LSHandlerRank</key>
 			        <string>Owner</string>
 			        <key>LSItemContentTypes</key>
 			        <array>
-			            <string>org.byteball.coin</string>
+			            <string>org.wnt.coin</string>
 			        </array>
 			    </dict>
 			</array>
+		</config-file>
+		<config-file target="*-Info.plist" parent="LSSupportsOpeningDocumentsInPlace">
+			<false/>
 		</config-file>
     </platform>
 
@@ -120,8 +123,8 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="application/octet-stream" />
-                <data android:mimeType="application/x-byteball" />
-                <data android:mimeType="application/byteball" />
+                <data android:mimeType="application/x-wnt" />
+                <data android:mimeType="application/wnt" />
                 <data android:mimeType="application/zip" />
                 <data android:mimeType="*/coin" />
                 <data android:mimeType="application/coin" />

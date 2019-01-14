@@ -190,7 +190,7 @@ angular.module('copayApp.services').factory('go', function($window, $rootScope, 
 		$rootScope.$emit('process_status_change', 'claiming', false);
 	}
 	
-	function extractByteballArgFromCommandLine(commandLine){
+	function extractWntArgFromCommandLine(commandLine){
 		var conf = require('wntcore/conf.js');
 		var url = new RegExp('^'+conf.program+':', 'i');
 		var file = new RegExp("\\."+configService.privateTextcoinExt+'$', 'i');
@@ -260,7 +260,7 @@ X-Ubuntu-StageHint=SideStage\n", {mode: 0755}, function(err){
 						fs.writeFile(mimeDir + '/packages/' + package_json.name+'.xml', "<?xml version=\"1.0\"?>\n\
 	 <mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>\n\
 	   <mime-type type=\"application/x-"+package_json.name+"\">\n\
-	   <comment>Byteball Private Coin</comment>\n\
+	   <comment>Wnt Private Coin</comment>\n\
 	   <glob pattern=\"*."+configService.privateTextcoinExt+"\"/>\n\
 	  </mime-type>\n\
 	 </mime-info>\n", {mode: 0755}, function(err) {
@@ -299,9 +299,9 @@ X-Ubuntu-StageHint=SideStage\n", {mode: 0755}, function(err){
 			gui.App.on('open', function(commandLine) {
 				console.log("Open url: " + commandLine);
 				if (commandLine){
-					var file = extractByteballArgFromCommandLine(commandLine);
+					var file = extractWntArgFromCommandLine(commandLine);
 					if (!file)
-						return console.log("no byteball: arg found");
+						return console.log("no wnt: arg found");
 					handleUri(file);
 					gui.Window.get().focus();
 				}

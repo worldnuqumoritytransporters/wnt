@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: byteball\n"
+"Project-Id-Version: wnt\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: crowdin.com\n"
-"X-Crowdin-Project: byteball\n"
+"X-Crowdin-Project: wnt\n"
 "X-Crowdin-Language: fil\n"
 "X-Crowdin-File: /master/i18n/po/template.pot\n"
 "Last-Translator: testz <testzcrypto@gmail.com>\n"
@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "12 na salita na pinaghihiwalay ng mga gitling"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About World Nuqumority Transporters"
-msgstr "Tungkol sa World Nuqumority Transporters"
+msgid "About Wnt"
+msgstr "Tungkol sa Wnt"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9
@@ -125,8 +125,8 @@ msgid "All Wallet Addresses"
 msgstr "Lahat ng mga Address ng Pitaka"
 
 #: public/views/translators.html:52
-msgid "All contributions to World Nuqumority Transporters's translation are welcome. Sign up at crowdin.com and join the World Nuqumority Transporters project at"
-msgstr "Lahat ng kontribusyon para sa pagsasalin sa World Nuqumority Transporters ay malugod na tinatanggap. Mag-sign up sa crowdin.com at sumali sa World Nuqumority Transporters na proyekto sa"
+msgid "All contributions to Wnt's translation are welcome. Sign up at crowdin.com and join the Wnt project at"
+msgstr "Lahat ng kontribusyon para sa pagsasalin sa Wnt ay malugod na tinatanggap. Mag-sign up sa crowdin.com at sumali sa Wnt na proyekto sa"
 
 #: public/views/modals/multi-payment.html:56
 msgid "Already Paid"
@@ -179,8 +179,8 @@ msgid "Asset"
 msgstr "Ari-arian"
 
 #: public/views/walletHome.html:534
-msgid "Attest profile data linked to any World Nuqumority Transporters address."
-msgstr "I-Attest ang profile data na naka-link sa anumang World Nuqumority Transporters address."
+msgid "Attest profile data linked to any Wnt address."
+msgstr "I-Attest ang profile data na naka-link sa anumang Wnt address."
 
 #: public/views/walletHome.html:348
 msgid "Attestation"
@@ -283,12 +283,12 @@ msgid "Browser unsupported"
 msgstr "Hindi supportadong browser"
 
 #: public/index.html:12
-msgid "World Nuqumority Transporters &mdash; smart payments"
+msgid "Wnt &mdash; smart payments"
 msgstr ""
 
 #: public/views/modals/destination-address.html:119
-msgid "World Nuqumority Transporters address"
-msgstr "World Nuqumority Transporters address"
+msgid "Wnt address"
+msgstr "Wnt address"
 
 #: public/views/includes/password.html:24
 msgid "CANCEL"
@@ -490,8 +490,8 @@ msgid "Could not import. Check input file and password"
 msgstr "Hindi maaring mainport. Suriin ang input file at password"
 
 #: src/js/controllers/walletHome.js:53
-msgid "Could not recognize a valid World Nuqumority Transporters QR Code"
-msgstr "Hindi nakilala ang isang balidong World Nuqumority Transporters QR Code"
+msgid "Could not recognize a valid Wnt QR Code"
+msgstr "Hindi nakilala ang isang balidong Wnt QR Code"
 
 #: src/js/controllers/walletHome.js:696
 msgid "Could not send payment"
@@ -639,8 +639,8 @@ msgid "Download CSV file"
 msgstr "I-download ang CSV file"
 
 #: public/views/splash.html:26
-msgid "Download the entire World Nuqumority Transporters database"
-msgstr "I-download ang buong database ng World Nuqumority Transporters"
+msgid "Download the entire Wnt database"
+msgstr "I-download ang buong database ng Wnt"
 
 #: public/views/correspondentDevice.html:26
 #: public/views/modals/destination-address.html:38
@@ -940,8 +940,8 @@ msgid "Multidevice Wallet"
 msgstr "Multidevice na pitaka"
 
 #: public/views/walletHome.html:255
-msgid "My World Nuqumority Transporters address"
-msgstr "Aking World Nuqumority Transporters address"
+msgid "My Wnt address"
+msgstr "Aking Wnt address"
 
 #: public/views/correspondentDevice.html:297
 msgid "My recording preference"
@@ -1122,8 +1122,8 @@ msgid "Port"
 msgstr "Port"
 
 #: public/views/walletHome.html:540
-msgid "Post arbitrary key-value pairs of data into World Nuqumority Transporters network."
-msgstr "Mag-post ng mga pares ng makatwirang halaga ng susi ng mga datos sa World Nuqumority Transporters newtork."
+msgid "Post arbitrary key-value pairs of data into Wnt network."
+msgstr "Mag-post ng mga pares ng makatwirang halaga ng susi ng mga datos sa Wnt newtork."
 
 #: public/views/walletHome.html:531
 msgid "Post values into datafeeds manually, be an oracle."
@@ -1621,20 +1621,20 @@ msgid "To be able to restore everything, please create a full backup (find the o
 msgstr "Upang maibalik ang lahat na bagay, mangyaring lumikha ng isang buong backup (hanapin sa mga pagpipilian sa menu)"
 
 #: public/views/walletHome.html:597
-msgid "To be able to send arbitrary data into World Nuqumority Transporters network, please switch to a single-address wallet first or create one."
-msgstr "Upang magagawang magpadala ng mga di-makatwirang datos sa World Nuqumority Transporters network, mangyaring lumipat sa isang solong-address na pitaka muna o lumikha ng isa."
+msgid "To be able to send arbitrary data into Wnt network, please switch to a single-address wallet first or create one."
+msgstr "Upang magagawang magpadala ng mga di-makatwirang datos sa Wnt network, mangyaring lumipat sa isang solong-address na pitaka muna o lumikha ng isa."
 
 #: public/views/walletHome.html:449
 msgid "To bind the payment to a condition, please click the peer's address in chat"
 msgstr "Upang ma-bind ang pagbabayad sa isang kondisyon, paki-click ang peer address sa chat"
 
 #: public/views/walletHome.html:402
-msgid "To byteball address"
-msgstr "Patungo sa byteball address"
+msgid "To wnt address"
+msgstr "Patungo sa wnt address"
 
 #: public/views/walletHome.html:394
-msgid "To byteball address or email"
-msgstr "Patungo sa byteball address o email"
+msgid "To wnt address or email"
+msgstr "Patungo sa wnt address o email"
 
 #: src/js/controllers/index.js:1434
 msgid "To email"
@@ -1747,8 +1747,8 @@ msgid "WARNINGS:"
 msgstr "MGA BABALA:"
 
 #: public/views/splash.html:53
-msgid "WELCOME TO World Nuqumority Token"
-msgstr "MALIGAYANG PAGDATING SA World Nuqumority Token"
+msgid "WELCOME TO BYTEBALL"
+msgstr "MALIGAYANG PAGDATING SA BYTEBALL"
 
 #: public/views/copayers.html:24
 msgid "Waiting for co-signers"
@@ -1784,8 +1784,8 @@ msgid "Wallet Name (at creation)"
 msgstr "Pangalan ng Pitaka (sa paglikha)"
 
 #: src/js/services/profileService.js:453
-msgid "Wallet already in World Nuqumority Transporters:"
-msgstr "Pitaka na nasa World Nuqumority Transporters na:"
+msgid "Wallet already in Wnt:"
+msgstr "Pitaka na nasa Wnt na:"
 
 #: public/views/create.html:48
 msgid "Wallet name"
@@ -2010,8 +2010,8 @@ msgid "or"
 msgstr "o"
 
 #: public/views/backup.html:24
-msgid "or backup all World Nuqumority Transporters data at"
-msgstr "o i-backup lahat ng mga datos ng World Nuqumority Transporters sa"
+msgid "or backup all Wnt data at"
+msgstr "o i-backup lahat ng mga datos ng Wnt sa"
 
 #: public/views/modals/offer-contract.html:51
 msgid "peer pays"

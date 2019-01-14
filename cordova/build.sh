@@ -14,7 +14,7 @@ checkOK() {
 
 # Configs
 BUILDDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-PROJECT="$BUILDDIR/../../byteballbuilds/project-$1"
+PROJECT="$BUILDDIR/../../wntbuilds/project-$1"
 
 CURRENT_OS=$1
 
@@ -56,7 +56,7 @@ echo "Project directory is $PROJECT"
 if [ ! -d $PROJECT ]; then
 	cd $BUILDDIR
 	echo "${OpenColor}${Green}* Creating project... ${CloseColor}"
-	cordova create ../../byteballbuilds/project-$1 jp.wnt.wallet WNT
+	cordova create ../../wntbuilds/project-$1 org.wnt.wallet Wnt
 	checkOK
 
 	cd $PROJECT
@@ -97,7 +97,7 @@ if [ ! -d $PROJECT ]; then
 	cordova plugin add cordova-plugin-statusbar
 	checkOK
 
-	cordova plugin add cordova-plugin-customurlscheme --variable URL_SCHEME=byteball
+	cordova plugin add cordova-plugin-customurlscheme --variable URL_SCHEME=wnt
 	checkOK
 
 	cordova plugin add cordova-plugin-inappbrowser
@@ -174,12 +174,12 @@ fi
 
 if $DBGJS
 then
-	echo "${OpenColor}${Green}* Generating byteball bundle (debug js)...${CloseColor}"
+	echo "${OpenColor}${Green}* Generating wnt bundle (debug js)...${CloseColor}"
 	cd $BUILDDIR/..
 	grunt cordova
 	checkOK
 else
-	echo "${OpenColor}${Green}* Generating byteball bundle...${CloseColor}"
+	echo "${OpenColor}${Green}* Generating wnt bundle...${CloseColor}"
 	cd $BUILDDIR/..
 	grunt cordova-prod
 	checkOK
@@ -192,8 +192,8 @@ cp -af public/** $PROJECT/www
 checkOK
 
 echo "${OpenColor}${Green}* Copying initial database...${CloseColor}"
-cp node_modules/wntcore/initial.byteball.sqlite $PROJECT/www
-cp node_modules/wntcore/initial.byteball-light.sqlite $PROJECT/www
+cp node_modules/wntcore/initial-db/initial.wnt.sqlite $PROJECT/www
+cp node_modules/wntcore/initial-db/initial.wnt-light.sqlite $PROJECT/www
 checkOK
 
 node $BUILDDIR/replaceForPartialClient.js $PROJECT
@@ -208,7 +208,7 @@ checkOK
 if [ $CURRENT_OS == "ANDROID" ]; then
 	echo "Android project!!!"
 	
-	cat $BUILDDIR/android/android.css >> $PROJECT/www/css/byteball.css
+	cat $BUILDDIR/android/android.css >> $PROJECT/www/css/wnt.css
 
 	mkdir -p $PROJECT/platforms/android/res/xml/
 	checkOK
@@ -235,19 +235,19 @@ if [ $CURRENT_OS == "IOS" ]; then
 #  mkdir -p $PROJECT/platforms/ios
 #  checkOK
 #
-#  cp ios/WNT-Info.plist $PROJECT/platforms/ios/WNT-Info.plist
+#  cp ios/Wnt-Info.plist $PROJECT/platforms/ios/Wnt-Info.plist
 #  checkOK
 #
-#  mkdir -p $PROJECT/platforms/ios/wnt/Resources/icons
+#  mkdir -p $PROJECT/platforms/ios/Wnt/Resources/icons
 #  checkOK
 #
-#  mkdir -p $PROJECT/platforms/ios/wnt/Resources/splash
+#  mkdir -p $PROJECT/platforms/ios/Wnt/Resources/splash
 #  checkOK
 #
-#  cp -R ios/icons/* $PROJECT/platforms/ios/wnt/Resources/icons
+#  cp -R ios/icons/* $PROJECT/platforms/ios/Wnt/Resources/icons
 #  checkOK
 #
-#  cp -R ios/splash/* $PROJECT/platforms/ios/wnt/Resources/splash
+#  cp -R ios/splash/* $PROJECT/platforms/ios/Wnt/Resources/splash
 #  checkOK
 fi
 

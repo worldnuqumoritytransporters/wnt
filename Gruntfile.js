@@ -20,10 +20,10 @@ module.exports = function(grunt) {
         command: 'rm -Rf bower_components node_modules'
       },
       osx64: {
-        command: '../byteballbuilds/build-osx.sh osx64'
+        command: '../wntbuilds/build-osx.sh osx64'
       },
       osx32: {
-        command: '../byteballbuilds/build-osx.sh osx32'
+        command: '../wntbuilds/build-osx.sh osx32'
       }
     },
     watch: {
@@ -92,11 +92,11 @@ module.exports = function(grunt) {
           'src/js/version.js',
           'src/js/init.js'
         ],
-        dest: 'public/byteball.js'
+        dest: 'public/wnt.js'
       },
       css: {
         src: ['src/css/*.css'],
-        dest: 'public/css/byteball.css'
+        dest: 'public/css/wnt.css'
       },
       foundation: {
         src: [
@@ -115,7 +115,7 @@ module.exports = function(grunt) {
       },
       prod: {
         files: {
-          'public/byteball.js': ['public/byteball.js'],
+          'public/wnt.js': ['public/wnt.js'],
           'public/angular.js': ['public/angular.js']
         }
       },
@@ -176,17 +176,17 @@ module.exports = function(grunt) {
         flatten: true,
         options: {timestamp: true, mode: true},
         src: ['webkitbuilds/build-osx.sh', 'webkitbuilds/Background.png'],
-        dest: '../byteballbuilds/'
+        dest: '../wntbuilds/'
       },
       linux: {
 		options: {timestamp: true, mode: true},
         files: [
-          {expand: true, cwd: './webkitbuilds/', src: ['byteball.desktop', '../public/img/icons/logo-circle.ico', '../public/img/icons/logo-circle-256.png'], dest: '../byteballbuilds/wnt/linux32/', flatten: true, filter: 'isFile', options: {timestamp: true, mode: true} },
-          {expand: true, cwd: './webkitbuilds/', src: ['byteball.desktop', '../public/img/icons/logo-circle.ico', '../public/img/icons/logo-circle-256.png'], dest: '../byteballbuilds/wnt/linux64/', flatten: true, filter: 'isFile', options: {timestamp: true, mode: true} },
+          {expand: true, cwd: './webkitbuilds/', src: ['wnt.desktop', '../public/img/icons/logo-circle.ico', '../public/img/icons/logo-circle-256.png'], dest: '../wntbuilds/Wnt/linux32/', flatten: true, filter: 'isFile', options: {timestamp: true, mode: true} },
+          {expand: true, cwd: './webkitbuilds/', src: ['wnt.desktop', '../public/img/icons/logo-circle.ico', '../public/img/icons/logo-circle-256.png'], dest: '../wntbuilds/Wnt/linux64/', flatten: true, filter: 'isFile', options: {timestamp: true, mode: true} },
         ],
       }
     },
-    karma: {
+    /*karma: {
       unit: {
         configFile: 'test/karma.conf.js'
       },
@@ -203,33 +203,33 @@ module.exports = function(grunt) {
         force: true,
         recursive: false
       }
-    },
+    },*/
     nwjs: {
       options: {
           //platforms: ['win','osx64','linux'],
           //platforms: ['osx64'],
           platforms: [getPlatform()],
-          appName: 'WNT',
-          buildDir: '../byteballbuilds',
-          version: '0.1.0',
+          appName: 'Wnt',
+          buildDir: '../wntbuilds',
+          version: '0.14.7',
           zip: false,
           macIcns: './public/img/icons/logo-circle.icns',
           winIco: './public/img/icons/logo-circle.ico',
           exeIco: './public/img/icons/logo-circle.ico',
           macPlist: {
-          	CFBundleURLTypes: [{CFBundleURLName: 'WNT action', CFBundleURLSchemes: ['byteball']}],
+          	CFBundleURLTypes: [{CFBundleURLName: 'Wnt action', CFBundleURLSchemes: ['wnt']}],
       		/*CFBundleIconFile: 'nw.icns',*/
       		LSHasLocalizedDisplayName: 0,
       		UTExportedTypeDeclarations: [{
-      			UTTypeIdentifier: 'jp.wnt.coin',
-      			UTTypeDescription: 'WNT Private Coin',
+      			UTTypeIdentifier: 'org.wnt.coin',
+      			UTTypeDescription: 'Wnt Private Coin',
       			UTTypeConformsTo: ["public.data"],
       			UTTypeTagSpecification: {
       				"public.filename-extension":["coin"]
       			}
       		}],
       		CFBundleDocumentTypes: [{
-      			CFBundleTypeName: "WNT Private Coin",
+      			CFBundleTypeName: "Wnt Private Coin",
       			LSItemContentTypes: ["org.wnt.coin"],
       			CFBundleTypeIconFile: "app.icns"
       		}]
@@ -240,19 +240,19 @@ module.exports = function(grunt) {
     compress: {
       linux32: {
         options: {
-          archive: '../byteballbuilds/wnt-linux32.zip'
+          archive: '../wntbuilds/wnt-linux32.zip'
         },
         expand: true,
-        cwd: '../byteballbuilds/wnt/linux32/',
+        cwd: '../wntbuilds/Wnt/linux32/',
         src: ['**/*'],
         dest: 'wnt-linux32/'
       },
       linux64: {
         options: {
-          archive: '../byteballbuilds/wnt-linux64.zip'
+          archive: '../wntbuilds/wnt-linux64.zip'
         },
         expand: true,
-        cwd: '../byteballbuilds/wnt/linux64/',
+        cwd: '../wntbuilds/Wnt/linux64/',
         src: ['**/*'],
         dest: 'wnt-linux64/'
       }
@@ -262,8 +262,8 @@ module.exports = function(grunt) {
             options:{
                 exclude: ['sqlite3', 'nw.gui', 'mysql', 'ws', 'regedit']
             },
-            src: 'public/byteball.js',
-            dest: 'public/byteball.js'
+            src: 'public/wnt.js',
+            dest: 'public/wnt.js'
         },
 	    partialClient:{
 		    options:{
@@ -277,13 +277,13 @@ module.exports = function(grunt) {
     debian_package: {
         linux64: {
             files: [
-                {expand: true, cwd: '../byteballbuilds/byteball-test/linux64/', src: ['**/*'], dest: '/opt/byteball-test/'},
-                //{expand: true, cwd: '../byteballbuilds/byteball-test/linux64', src: ['byteball.desktop'], dest: '/usr/share/applications/byteball-test.desktop'}
+                {expand: true, cwd: '../wntbuilds/wnt-test/linux64/', src: ['**/*'], dest: '/opt/wnt-test/'},
+                //{expand: true, cwd: '../wntbuilds/wnt-test/linux64', src: ['wnt.desktop'], dest: '/usr/share/applications/wnt-test.desktop'}
             ],
             options: {
                 maintainer: {
-                    name: 'WNT',
-                    email: 'wnt@worldnuqumoritytoken.com'
+                    name: 'Wnt',
+                    email: 'wnt@worldnuqumoritytransporters.com'
                 },
                 long_description: 'Smart payments made simple',
                 target_architecture: 'amd64'
@@ -315,8 +315,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-angular-gettext');
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-exec');
-  grunt.loadNpmTasks('grunt-karma');
-  grunt.loadNpmTasks('grunt-karma-coveralls');
+  //grunt.loadNpmTasks('grunt-karma');
+  //grunt.loadNpmTasks('grunt-karma-coveralls');
   grunt.loadNpmTasks('grunt-nw-builder');
   grunt.loadNpmTasks('grunt-contrib-compress');
   //grunt.loadNpmTasks('grunt-debian-package');
@@ -328,8 +328,8 @@ module.exports = function(grunt) {
   grunt.registerTask('cordova-prod', ['cordova', 'uglify']);
   //grunt.registerTask('prod', ['default', 'uglify']);
   grunt.registerTask('translate', ['nggettext_extract']);
-  grunt.registerTask('test', ['karma:unit']);
-  grunt.registerTask('test-coveralls', ['karma:prod', 'coveralls']);
+  //grunt.registerTask('test', ['karma:unit']);
+  //grunt.registerTask('test-coveralls', ['karma:prod', 'coveralls']);
   //grunt.registerTask('desktop', ['prod', 'nwjs', 'copy:linux', 'compress:linux32', 'compress:linux64', 'copy:osx', 'exec:osx32', 'exec:osx64']);
   grunt.registerTask('desktop', ['default', 'nwjs']);
   grunt.registerTask('dmg', ['copy:osx', 'exec:osx64']);
