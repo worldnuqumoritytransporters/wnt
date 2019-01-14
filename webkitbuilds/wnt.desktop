@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Wnt
+Comment=Smart payments made simple
+Exec=bash -c 'cd $(dirname %k) && ./Wnt %u'
+Icon=logo-circle-256.png
+Terminal=false
+Categories=Office;Finance;
+MimeType=x-scheme-handler/wnt;
+X-Ubuntu-Touch=true
+X-Ubuntu-StageHint=SideStage
+
