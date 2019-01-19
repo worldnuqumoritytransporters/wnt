@@ -283,8 +283,8 @@ msgid "Browser unsupported"
 msgstr "ブラウザ未対応"
 
 #: public/index.html:12
-msgid "Wnt &mdash; smart payments"
-msgstr "Wnt &mdash; スマート決済"
+msgid "WNT Wallet &mdash; smart DAG payments"
+msgstr "WNT Wallet &mdash; スマートDAG決済"
 
 #: public/views/modals/destination-address.html:119
 msgid "Wnt address"
@@ -1695,7 +1695,7 @@ msgid "Unit for blackbytes"
 msgstr "blackbytesの単位"
 
 #: public/views/preferencesGlobal.html:46
-msgid "Unit for bytes"
+msgid "Unit for WNT"
 msgstr "bytesの単位"
 
 #: public/views/walletHome.html:212
@@ -1748,8 +1748,8 @@ msgid "WARNINGS:"
 msgstr "注意:"
 
 #: public/views/splash.html:53
-msgid "WELCOME TO BYTEBALL"
-msgstr "BYTEBALLへようこそ"
+msgid "WELCOME TO WNT"
+msgstr "WNTへようこそ"
 
 #: public/views/copayers.html:24
 msgid "Waiting for co-signers"

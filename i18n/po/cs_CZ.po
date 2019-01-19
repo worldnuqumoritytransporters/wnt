@@ -283,7 +283,7 @@ msgid "Browser unsupported"
 msgstr "Nepodporovaný prohlížeč"
 
 #: public/index.html:12
-msgid "Wnt &mdash; smart payments"
+msgid "WNT Wallet &mdash; smart DAG payments"
 msgstr ""
 
 #: public/views/modals/destination-address.html:119
@@ -491,7 +491,7 @@ msgstr "Chyba importu. Zkontrolujte soubor a heslo"
 
 #: src/js/controllers/walletHome.js:53
 msgid "Could not recognize a valid Wnt QR Code"
-msgstr "Bytebal QR kód nebyl rozpoznán"
+msgstr "Wnt QR kód nebyl rozpoznán"
 
 #: src/js/controllers/walletHome.js:696
 msgid "Could not send payment"
@@ -1695,8 +1695,8 @@ msgid "Unit for blackbytes"
 msgstr "Jednotka pro blackbytes"
 
 #: public/views/preferencesGlobal.html:46
-msgid "Unit for bytes"
-msgstr "Jednotka pro bytes"
+msgid "Unit for WNT"
+msgstr "Jednotka pro WNT"
 
 #: public/views/walletHome.html:212
 msgid "Unsent transactions"
@@ -1748,8 +1748,8 @@ msgid "WARNINGS:"
 msgstr "VAROVÁNÍ:"
 
 #: public/views/splash.html:53
-msgid "WELCOME TO BYTEBALL"
-msgstr "VÍTEJTE V BYTEBALL"
+msgid "WELCOME TO WNT"
+msgstr "VÍTEJTE V WNT"
 
 #: public/views/copayers.html:24
 msgid "Waiting for co-signers"

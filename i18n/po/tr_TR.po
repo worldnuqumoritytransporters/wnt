@@ -283,7 +283,7 @@ msgid "Browser unsupported"
 msgstr "Desteklenmeyen tarayıcı"
 
 #: public/index.html:12
-msgid "Wnt &mdash; smart payments"
+msgid "WNT Wallet &mdash; smart DAG payments"
 msgstr ""
 
 #: public/views/modals/destination-address.html:119
@@ -1695,8 +1695,8 @@ msgid "Unit for blackbytes"
 msgstr "Blackbyte birimi"
 
 #: public/views/preferencesGlobal.html:46
-msgid "Unit for bytes"
-msgstr "Byte birimi"
+msgid "Unit for WNT"
+msgstr "WNT birimi"
 
 #: public/views/walletHome.html:212
 msgid "Unsent transactions"
@@ -1748,8 +1748,8 @@ msgid "WARNINGS:"
 msgstr "UYARILAR:"
 
 #: public/views/splash.html:53
-msgid "WELCOME TO BYTEBALL"
-msgstr "BYTEBALL'A HOŞ GELDİNİZ"
+msgid "WELCOME TO WNT"
+msgstr "WNT'A HOŞ GELDİNİZ"
 
 #: public/views/copayers.html:24
 msgid "Waiting for co-signers"

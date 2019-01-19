@@ -99,8 +99,8 @@ angular.module('copayApp.directives')
           var amount = +tokens[2];
 
                 var settings = configService.getSync().wallet.settings;
-          var unitValue = 1;
-          var decimals = 0;
+          var unitValue = 1000000;
+          var decimals = 6;
           if (asset === 'base'){
             unitValue = settings.unitValue;
             decimals = Number(settings.unitDecimals);
@@ -200,8 +200,8 @@ angular.module('copayApp.directives')
       var constants = require('wntcore/constants.js');
       var asset = attrs.validAmount;
             var settings = configService.getSync().wallet.settings;
-      var unitValue = 1;
-      var decimals = 0;
+      var unitValue = 1000000;
+      var decimals = 6;
       if (asset === 'base'){
         unitValue = settings.unitValue;
         decimals = Number(settings.unitDecimals);

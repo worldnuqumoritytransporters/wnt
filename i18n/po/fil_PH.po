@@ -283,7 +283,7 @@ msgid "Browser unsupported"
 msgstr "Hindi supportadong browser"
 
 #: public/index.html:12
-msgid "Wnt &mdash; smart payments"
+msgid "WNT Wallet &mdash; smart DAG payments"
 msgstr ""
 
 #: public/views/modals/destination-address.html:119
@@ -1694,8 +1694,8 @@ msgid "Unit for blackbytes"
 msgstr "Yunit para sa blackbytes"
 
 #: public/views/preferencesGlobal.html:46
-msgid "Unit for bytes"
-msgstr "Yunit para sa bytes"
+msgid "Unit for WNT"
+msgstr "Yunit para sa WNT"
 
 #: public/views/walletHome.html:212
 msgid "Unsent transactions"
@@ -1747,8 +1747,8 @@ msgid "WARNINGS:"
 msgstr "MGA BABALA:"
 
 #: public/views/splash.html:53
-msgid "WELCOME TO BYTEBALL"
-msgstr "MALIGAYANG PAGDATING SA BYTEBALL"
+msgid "WELCOME TO WNT"
+msgstr "MALIGAYANG PAGDATING SA WNT"
 
 #: public/views/copayers.html:24
 msgid "Waiting for co-signers"

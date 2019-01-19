@@ -1079,7 +1079,7 @@ angular.module('copayApp.controllers').controller('indexController', function($r
         self.arrBalances.push(balanceInfo);
     }
     self.assetIndex = self.assetIndex || 0;
-	if (!self.arrBalances[self.assetIndex]) // if no such index in the subwallet, reset to bytes
+	if (!self.arrBalances[self.assetIndex]) // if no such index in the subwallet, reset to WNT
 		self.assetIndex = 0;
 	if (!self.shared_address)
 		self.arrMainWalletBalances = self.arrBalances;
@@ -1194,7 +1194,7 @@ angular.module('copayApp.controllers').controller('indexController', function($r
           var _amount, _note;
           var dataString;
           data.forEach(function(it, index) {
-            var amount = it.amount;
+            var amount = it.amount / 1e6;
 
             if (it.action == 'moved')
               amount = 0;
@@ -1205,7 +1205,7 @@ angular.module('copayApp.controllers').controller('indexController', function($r
             if (it.action == 'moved')
               _note += ' Moved:' + it.amount
 
-            dataString = formatDate(it.time * 1000) + ',' + formatString(it.addressTo) + ',' + _note + ',' + _amount + ',byte,,,,';
+            dataString = formatDate(it.time * 1000) + ',' + formatString(it.addressTo) + ',' + _note + ',' + _amount + ',MNT,,,,';
             csvContent += dataString + "\n";
 
           });

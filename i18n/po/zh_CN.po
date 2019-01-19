@@ -283,7 +283,7 @@ msgid "Browser unsupported"
 msgstr "浏览器不支持"
 
 #: public/index.html:12
-msgid "Wnt &mdash; smart payments"
+msgid "WNT Wallet &mdash; smart DAG payments"
 msgstr ""
 
 #: public/views/modals/destination-address.html:119
@@ -1695,7 +1695,7 @@ msgid "Unit for blackbytes"
 msgstr "blackbytes单位"
 
 #: public/views/preferencesGlobal.html:46
-msgid "Unit for bytes"
+msgid "Unit for WNT"
 msgstr "bytes单位"
 
 #: public/views/walletHome.html:212
@@ -1748,8 +1748,8 @@ msgid "WARNINGS:"
 msgstr "警告:"
 
 #: public/views/splash.html:53
-msgid "WELCOME TO BYTEBALL"
-msgstr "欢迎来到 BYTEBALL"
+msgid "WELCOME TO WNT"
+msgstr "欢迎来到 WNT"
 
 #: public/views/copayers.html:24
 msgid "Waiting for co-signers"

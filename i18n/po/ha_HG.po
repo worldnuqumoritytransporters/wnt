@@ -1475,7 +1475,7 @@ msgid "Unit for blackbytes"
 msgstr ""
 
 #: public/views/preferencesGlobal.html:46
-msgid "Unit for bytes"
+msgid "Unit for WNT"
 msgstr ""
 
 #: public/views/walletHome.html:197
@@ -1520,7 +1520,7 @@ msgid "WARNINGS:"
 msgstr ""
 
 #: public/views/splash.html:53
-msgid "WELCOME TO BYTEBALL"
+msgid "WELCOME TO WNT"
 msgstr ""
 
 #: public/views/copayers.html:24

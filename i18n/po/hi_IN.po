@@ -283,7 +283,7 @@ msgid "Browser unsupported"
 msgstr "निराधार ब्राउज़र"
 
 #: public/index.html:12
-msgid "Wnt &mdash; smart payments"
+msgid "WNT Wallet &mdash; smart DAG payments"
 msgstr ""
 
 #: public/views/modals/destination-address.html:119
@@ -1696,7 +1696,7 @@ msgid "Unit for blackbytes"
 msgstr "इकाईं ब्लैकबाइटस के लिए"
 
 #: public/views/preferencesGlobal.html:46
-msgid "Unit for bytes"
+msgid "Unit for WNT"
 msgstr "इकाईं बाइटस के लिए"
 
 #: public/views/walletHome.html:212
@@ -1749,8 +1749,8 @@ msgid "WARNINGS:"
 msgstr "चेतावनियाँ:"
 
 #: public/views/splash.html:53
-msgid "WELCOME TO BYTEBALL"
-msgstr "Wnt में आपका स्वागत है"
+msgid "WELCOME TO WNT"
+msgstr "WNT में आपका स्वागत है"
 
 #: public/views/copayers.html:24
 msgid "Waiting for co-signers"

@@ -283,7 +283,7 @@ msgid "Browser unsupported"
 msgstr "Web-läsare inte understödd"
 
 #: public/index.html:12
-msgid "Wnt &mdash; smart payments"
+msgid "WNT Wallet &mdash; smart DAG payments"
 msgstr ""
 
 #: public/views/modals/destination-address.html:119
@@ -1748,8 +1748,8 @@ msgid "WARNINGS:"
 msgstr "VARNINGAR:"
 
 #: public/views/splash.html:53
-msgid "WELCOME TO BYTEBALL"
-msgstr "VÄLKOMMEN TILL BYTEBALL"
+msgid "WELCOME TO WNT"
+msgstr "VÄLKOMMEN TILL WNT"
 
 #: public/views/copayers.html:24
 msgid "Waiting for co-signers"
