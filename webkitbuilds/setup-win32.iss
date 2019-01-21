@@ -3,7 +3,7 @@
 
 #define MyAppName "Wnt"
 #define MyAppPackageName "Wnt"
-#define MyAppVersion "2.6.0"
+#define MyAppVersion "1.1.0"
 #define MyAppPublisher "Wnt"
 #define MyAppURL "https://worldnuqumoritytransporters.com"
 #define MyAppExeName "Wnt.exe"
