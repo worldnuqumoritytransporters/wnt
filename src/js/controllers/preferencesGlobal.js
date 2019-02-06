@@ -17,10 +17,24 @@ angular.module('copayApp.controllers').controller('preferencesGlobalController',
       this.currentLanguageName = uxLanguage.getCurrentLanguageName();
       this.torEnabled = conf.socksHost && conf.socksPort;
       $scope.pushNotifications = config.pushNotifications.enabled;
+      $scope.spendUnconfirmed = config.wallet.spendUnconfirmed;
     };
 
 
-    var unwatchPushNotifications = $scope.$watch('pushNotifications', function(newVal, oldVal) {
+      var unwatchSpendUnconfirmed = $scope.$watch('spendUnconfirmed', function(newVal, oldVal) {
+          if (newVal == oldVal) return;
+          var opts = {
+              wallet: {
+                  spendUnconfirmed: newVal
+              }
+          };
+          configService.set(opts, function(err) {
+              //	$rootScope.$emit('Local/SpendUnconfirmedUpdated');
+              if (err) $log.debug(err);
+          });
+      });
+
+      var unwatchPushNotifications = $scope.$watch('pushNotifications', function(newVal, oldVal) {
       if (newVal == oldVal) return;
       var opts = {
         pushNotifications: {
@@ -74,6 +88,7 @@ angular.module('copayApp.controllers').controller('preferencesGlobalController',
 
 
     $scope.$on('$destroy', function() {
+        unwatchSpendUnconfirmed();
         unwatchPushNotifications();
         unwatchEncrypt();
     });

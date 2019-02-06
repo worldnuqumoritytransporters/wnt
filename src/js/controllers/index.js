@@ -721,7 +721,6 @@ angular.module('copayApp.controllers').controller('indexController', function($r
     self.lockedBalanceBytes = null;
     self.availableBalanceBytes = null;
     self.pendingAmount = null;
-    self.spendUnconfirmed = null;
 
     self.totalBalanceStr = null;
     self.availableBalanceStr = null;
@@ -739,7 +738,6 @@ angular.module('copayApp.controllers').controller('indexController', function($r
     self.historyShowShowAll = false;
     self.balanceByAddress = null;
     self.pendingTxProposalsCountForUs = null;
-    self.setSpendUnconfirmed();
 
     $timeout(function() {
         //$rootScope.$apply();
@@ -917,10 +915,6 @@ angular.module('copayApp.controllers').controller('indexController', function($r
             }, 1);
         }
     });
-  };
-
-  self.setSpendUnconfirmed = function() {
-    self.spendUnconfirmed = configService.getSync().wallet.spendUnconfirmed;
   };
 
 

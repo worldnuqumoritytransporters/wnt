@@ -18,7 +18,6 @@ angular.module('copayApp.controllers')
 		var config = configService.getSync();
 		var configWallet = config.wallet;
 		var indexScope = $scope.index;
-		$scope.currentSpendUnconfirmed = configWallet.spendUnconfirmed;
 		var network = require('wntcore/network.js');
 
 		// INIT
@@ -585,13 +584,10 @@ angular.module('copayApp.controllers')
 
 		// Send 
 
-		var unwatchSpendUnconfirmed = $scope.$watch('currentSpendUnconfirmed', function(newVal, oldVal) {
-			if (newVal == oldVal) return;
-			$scope.currentSpendUnconfirmed = newVal;
-		});
+
 
 		$scope.$on('$destroy', function() {
-			unwatchSpendUnconfirmed();
+			// unwatchSpendUnconfirmed();
 		});
 
 		this.resetError = function() {
@@ -1135,6 +1131,7 @@ angular.module('copayApp.controllers')
 							asset: asset,
 							do_not_email: true,
 							send_all: self.bSendAll,
+                            spend_unconfirmed: configWallet.spendUnconfirmed ? 'all' : 'own',
 							arrSigningDeviceAddresses: arrSigningDeviceAddresses,
 							recipient_device_address: recipient_device_address
 						};
@@ -1344,6 +1341,7 @@ angular.module('copayApp.controllers')
 				indexScope.setOngoingProcess(gettext('sending'), true);
 
 				fc.sendMultiPayment({
+                    spend_unconfirmed: configWallet.spendUnconfirmed ? 'all' : 'own',
 					arrSigningDeviceAddresses: arrSigningDeviceAddresses,
 					shared_address: indexScope.shared_address,
 					messages: [objMessage]
@@ -1569,8 +1567,7 @@ angular.module('copayApp.controllers')
 			this.lockAmount = false;
 			this.hideAdvSend = true;
 			this.send_multiple = false;
-			$scope.currentSpendUnconfirmed = configService.getSync()
-				.wallet.spendUnconfirmed;
+
 
 			this._amount = this._address = null;
 			this.bSendAll = false;
