@@ -1637,6 +1637,9 @@ msgstr "宛先Wntアドレス"
 msgid "To wnt address or email"
 msgstr "宛先Wntアドレスまたはメール"
 
+msgid "WNT address"
+msgstr "WNTアドレス"
+
 #: src/js/controllers/index.js:1434
 msgid "To email"
 msgstr "宛先メールアドレス"
