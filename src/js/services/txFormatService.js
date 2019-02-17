@@ -12,7 +12,7 @@ angular.module('copayApp.services').factory('txFormatService', function(profileS
 	return profileService.formatAmountWithUnit(amount, asset);
   };
 	
-	var formatFeeStr = function(fee) {
+	var formatFeeStr = function(fee, asset) {
         if (!fee) return;
         if (asset !== "base" && asset !==  constants.BLACKBYTES_ASSET && !profileService.assetMetadata[asset])
             return fee + ' bytes';
@@ -33,7 +33,7 @@ angular.module('copayApp.services').factory('txFormatService', function(profileS
     }
 
     tx.amountStr = formatAmountStr(tx.amount, tx.asset);
-    tx.feeStr = formatFeeStr(tx.fee || tx.fees);
+    tx.feeStr = formatFeeStr(tx.fee || tx.fees, tx.asset);
 
     return tx;
   };
