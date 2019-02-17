@@ -7,7 +7,7 @@
   ],
   "dependencies": {
     "angular": "1",
-    "angular-foundation": "wnt/angular-foundation",
+    "angular-foundation": "worldnuqumoritytransporters/angular-foundation",
     "angular-gettext": "2",
     "angular-touch": "1",
     "angular-carousel": "*",
