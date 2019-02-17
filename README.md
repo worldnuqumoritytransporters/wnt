@@ -94,7 +94,7 @@ All app bundles will be placed at `../wntbuilds` dir, so create it first: `mkdir
 - `grunt linux64`
 
 
-## About Wnt
+## About WNT
 
 TBD
 

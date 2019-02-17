@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "12 riječi odvojenih crtama"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About Wnt"
-msgstr "O Wntu"
+msgid "About WNT"
+msgstr "O WNTu"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9

@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "12 words wey seperate by dashes"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About Wnt"
-msgstr "About Wnt"
+msgid "About WNT"
+msgstr "About WNT"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9

@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "ダッシュで区切られた12のワード"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About Wnt"
-msgstr "Wntについて"
+msgid "About WNT"
+msgstr "WNTについて"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9

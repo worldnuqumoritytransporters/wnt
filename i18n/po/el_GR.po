@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "12 λέξεις διαχωρισμένες με παύλες"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About Wnt"
-msgstr "Σχετικά με το Wnt"
+msgid "About WNT"
+msgstr "Σχετικά με το WNT"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9

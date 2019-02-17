@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "用破折号隔开的12个单词"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About Wnt"
-msgstr "关于Wnt"
+msgid "About WNT"
+msgstr "关于WNT"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9

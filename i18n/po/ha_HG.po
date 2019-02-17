@@ -30,7 +30,7 @@ msgid "12 words separated by dashes"
 msgstr ""
 
 #: public/views/preferencesGlobal.html:135
-msgid "About Wnt"
+msgid "About WNT"
 msgstr ""
 
 #: src/js/controllers/copayers.js:8

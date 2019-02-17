@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "대시로 구분된 12단어"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About Wnt"
-msgstr "Wnt에 대해서"
+msgid "About WNT"
+msgstr "WNT에 대해서"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9

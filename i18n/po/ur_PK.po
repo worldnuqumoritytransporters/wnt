@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "12الفاظ جو ڈیشوں سےالگ کیے گیے ہے۔"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About Wnt"
-msgstr "Wnt کے متعلک"
+msgid "About WNT"
+msgstr "WNT کے متعلک"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9

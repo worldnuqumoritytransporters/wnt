@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "12 слів, розділених тире"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About Wnt"
-msgstr "Про Wnt"
+msgid "About WNT"
+msgstr "Про WNT"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9

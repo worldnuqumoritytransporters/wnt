@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "डैश से अलग किए गए १२ शब्द"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About Wnt"
-msgstr "Wnt के बारे में"
+msgid "About WNT"
+msgstr "WNT के बारे में"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9

@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "12 Wörter durch Bindestriche getrennt"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About Wnt"
-msgstr "Über Wnt"
+msgid "About WNT"
+msgstr "Über WNT"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9

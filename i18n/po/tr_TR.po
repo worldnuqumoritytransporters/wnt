@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "Tire ile ayrılmış 12 kelime"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About Wnt"
-msgstr "Wnt hakkında"
+msgid "About WNT"
+msgstr "WNT hakkında"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9

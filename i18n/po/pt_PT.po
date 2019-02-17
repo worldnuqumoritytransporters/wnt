@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "12 palavras separadas por hífenes"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About Wnt"
-msgstr "Sobre o Wnt"
+msgid "About WNT"
+msgstr "Sobre o WNT"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9

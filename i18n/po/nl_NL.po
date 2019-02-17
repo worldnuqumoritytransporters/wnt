@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "12 woorden, gescheiden door streepjes"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About Wnt"
-msgstr "Over Wnt"
+msgid "About WNT"
+msgstr "Over WNT"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9

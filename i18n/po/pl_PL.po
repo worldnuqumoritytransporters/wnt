@@ -42,8 +42,8 @@ msgid "12 words separated by dashes"
 msgstr "12 wyrazów oddzielonych myślnikami"
 
 #: public/views/preferencesGlobal.html:139
-msgid "About Wnt"
-msgstr "O Wnt"
+msgid "About WNT"
+msgstr "O WNT"
 
 #: src/js/controllers/copayers.js:8
 #: src/js/controllers/preferencesDelete.js:9
