@@ -123,7 +123,7 @@ input.datafeed_input {
             </div>
 
             <ul rn-carousel rn-carousel-transition="hexagon" rn-carousel-index="index.assetIndex">
-                <li ng-click='index.onClick()' ng-show="!index.updateError && index.walletScanStatus != 'error' && $first">
+                <li ng-click='index.onClick()' ng-show="!index.updateError && index.walletScanStatus != 'error' && $first" ng-repeat="balance in index.arrBalances">
 					<div ng-click='index.updateAll(); index.updateHistoryFromNetwork()'>
 						<strong class="size-36" ng-if="balance.totalStr && balance.totalStr.length <= 16">{{balance.totalStr}}</strong>
 						<div ng-if="balance.totalStr && balance.totalStr.length > 16">
