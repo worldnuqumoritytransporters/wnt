@@ -43,7 +43,8 @@ Utils.formatAmount = function(bytes, unitCode, opts) {
 
   var u = Constants.UNITS[unitCode];
   var intAmountLength = Math.floor(bytes / u.value).toString().length;
-  var digits = intAmountLength >= 6 || unitCode == 'one' ? 0 : 6 - intAmountLength;
+  // var digits = intAmountLength >= 6 || unitCode == 'one' ? 0 : 6 - intAmountLength;
+  var digits = intAmountLength >= 6 ? 0 : 6 - intAmountLength;
   var amount = opts.dontRound ? (bytes / u.value).toString() : (bytes / u.value).toFixed(digits);
   return addSeparators(amount, opts.thousandsSeparator || ',', opts.decimalSeparator || '.', u.minDecimals);
 };

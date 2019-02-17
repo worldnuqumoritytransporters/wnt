@@ -13,9 +13,10 @@ angular.module('copayApp.services').factory('txFormatService', function(profileS
   };
 	
 	var formatFeeStr = function(fee) {
-		if (!fee) return;
-		return (fee/1e6).toLocaleString([], {maximumFractionDigits: 6}) + ' WNT';
-        //return profileService.formatAmountWithUnit(fee, asset);
+        if (!fee) return;
+        if (asset !== "base" && asset !==  constants.BLACKBYTES_ASSET && !profileService.assetMetadata[asset])
+            return fee + ' bytes';
+        return profileService.formatAmountWithUnit(fee, asset);
 	};
 
   root.processTx = function(tx) {
