@@ -209,7 +209,7 @@ module.exports = function(grunt) {
           //platforms: ['win','osx64','linux'],
           //platforms: ['osx64'],
           platforms: [getPlatform()],
-          appName: 'Wnt',
+          appName: 'WNT',
           buildDir: '../wntbuilds',
           version: '0.14.7',
           zip: false,
