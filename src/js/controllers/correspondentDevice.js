@@ -111,7 +111,7 @@ angular.module('copayApp.controllers').controller('correspondentDeviceController
 				$timeout(function(){
 					$scope.$apply();
 				});
-                correspondentListService.assocLastMessageDateByCorrespondent[correspondent.device_address] = new Date().toISOString().substr(0, 19).replace('T', ' ');
+				correspondentListService.assocLastMessageDateByCorrespondent[correspondent.device_address] = new Date().toISOString().substr(0, 19).replace('T', ' ');
 				if (correspondent.my_record_pref && correspondent.peer_record_pref) chatStorage.store(correspondent.device_address, message, 0);
 			},
 			ifError: function(error){
@@ -316,8 +316,12 @@ angular.module('copayApp.controllers').controller('correspondentDeviceController
 								}, 1);
 								return;
 							}
+							if (contract.oracle_address === configService.TIMESTAMPER_ADDRESS)
+								contract.feed_value = parseInt(contract.feed_value);
+							else
+								contract.feed_value = contract.feed_value + '';
 							var arrExplicitEventCondition = 
-								['in data feed', [[contract.oracle_address], contract.feed_name, contract.relation, contract.feed_value+'', last_mci]];
+								['in data feed', [[contract.oracle_address], contract.feed_name, contract.relation, contract.feed_value, last_mci]];
 							var arrEventCondition = arrExplicitEventCondition;
 							var data_address = (contract.data_party === 'me') ? my_address : address;
 							var expiry_address = (contract.expiry_party === 'me') ? my_address : address;
@@ -379,7 +383,7 @@ angular.module('copayApp.controllers').controller('correspondentDeviceController
 					function composeAndSend(shared_address, arrDefinition, assocSignersByPath, my_address){
 						profileService.bKeepUnlocked = true;
 						var opts = {
-                            spend_unconfirmed: configWallet.spendUnconfirmed ? 'all' : 'own',
+							spend_unconfirmed: configWallet.spendUnconfirmed ? 'all' : 'own',
 							shared_address: indexScope.shared_address,
 							asset: contract.myAsset,
 							to_address: shared_address,
@@ -502,6 +506,15 @@ angular.module('copayApp.controllers').controller('correspondentDeviceController
 				arrAllMemberAddresses = lodash.uniq(arrAllMemberAddresses);
 				if (arrAllMemberAddresses.length === 0)
 					throw Error("no member addresses in "+paymentJson);
+				var assocPeerNamesByDeviceAddress = {};
+				var loadCorrespondentNames = function(cb){
+					device.readCorrespondents(function(arrCorrespondents){
+						arrCorrespondents.forEach(function(corr){
+							assocPeerNamesByDeviceAddress[corr.device_address] = corr.name;
+						});
+						cb();
+					});
+				};
 				var findMyAddresses = function(cb){
 					db.query(
 						"SELECT address FROM my_addresses WHERE address IN(?) \n\
@@ -523,9 +536,15 @@ angular.module('copayApp.controllers').controller('correspondentDeviceController
 								var arrPeerAddresses = walletDefinedByAddresses.getPeerAddressesFromSigners(assocSignersByPath);
 								if (lodash.difference(arrPeerAddresses, arrAllMemberAddresses).length !== 0)
 									throw Error("inconsistent peer addresses");
+								var assocPeerNamesByAddress = {};
+								for (var path in assocSignersByPath){
+									var signerInfo = assocSignersByPath[path];
+									if (signerInfo.device_address !== device.getMyDeviceAddress())
+										assocPeerNamesByAddress[signerInfo.address] = assocPeerNamesByDeviceAddress[signerInfo.device_address] || 'unknown peer';
+								}
 								$scope.arrHumanReadableDefinitions.push({
 									destinationAddress: destinationAddress,
-									humanReadableDefinition: correspondentListService.getHumanReadableDefinition(arrDefinition, arrMyAddresses, [], arrPeerAddresses)
+									humanReadableDefinition: correspondentListService.getHumanReadableDefinition(arrDefinition, arrMyAddresses, [], assocPeerNamesByAddress)
 								});
 							}
 							cb();
@@ -544,6 +563,7 @@ angular.module('copayApp.controllers').controller('correspondentDeviceController
 						}
 					);
 				};
+				arrFuncs.push(loadCorrespondentNames);
 				arrFuncs.push(findMyAddresses);
 				arrFuncs.push(checkDuplicatePayment);
 				async.series(arrFuncs, function(err){
@@ -643,7 +663,7 @@ angular.module('copayApp.controllers').controller('correspondentDeviceController
 						indexScope.current_multi_payment_key = current_multi_payment_key;
 						var recipient_device_address = lodash.clone(correspondent.device_address);
 						fc.sendMultiPayment({
-                            spend_unconfirmed: configWallet.spendUnconfirmed ? 'all' : 'own',
+							spend_unconfirmed: configWallet.spendUnconfirmed ? 'all' : 'own',
 							asset: asset,
 							arrSigningDeviceAddresses: getSigningDeviceAddresses(fc),
 							recipient_device_address: recipient_device_address,
@@ -830,7 +850,7 @@ angular.module('copayApp.controllers').controller('correspondentDeviceController
 						var recipient_device_address = lodash.clone(correspondent.device_address);
 						indexScope.current_vote_key = current_vote_key;
 						fc.sendMultiPayment({
-                            spend_unconfirmed: configService.getSync().wallet.spendUnconfirmed ? 'all' : 'own',
+							spend_unconfirmed: configService.getSync().wallet.spendUnconfirmed ? 'all' : 'own',
 							arrSigningDeviceAddresses: getSigningDeviceAddresses(fc),
 							paying_addresses: arrAddresses,
 							signing_addresses: arrAddresses,
@@ -1235,13 +1255,13 @@ angular.module('copayApp.controllers').controller('correspondentDeviceController
 			case 'last_name': return gettext('Last name');
 			case 'dob': return gettext('Date of birth');
 			case 'country': return gettext('Country');
-            case 'personal_code': return gettext('Personal code');
+			case 'personal_code': return gettext('Personal code');
 			case 'us_state': return gettext('US state');
 			case 'id_number': return gettext('ID number');
 			case 'id_type': return gettext('ID type');
 			case 'id_subtype': return gettext('ID subtype');
-            case 'id_expiry': return gettext('ID expires at');
-            case 'id_issued_at': return gettext('ID issued at');
+			case 'id_expiry': return gettext('ID expires at');
+			case 'id_issued_at': return gettext('ID issued at');
 			default: return field;
 		}
 	}

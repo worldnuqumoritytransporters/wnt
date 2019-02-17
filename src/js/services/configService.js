@@ -40,7 +40,7 @@ angular.module('copayApp.services').factory('configService', function(storageSer
 		totalCosigners: 6
 	},
 
-	hub: (constants.alt === '2' && isTestnet) ? 'worldnuqumoritytransporters.com/bb-test' : 'worldnuqumoritytransporters.com/bb',
+	hub: (constants.alt === '2' && isTestnet) ? 'worldnuqumoritytransporters.com/bb-test' : 'hub.worldnuqumoritytransporters.com',
 	attestorAddresses: {
 		email: 'TPJGUPB75MRD7VDWGNRAHCE4EO3JMQ63'
 	},

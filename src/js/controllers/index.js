@@ -1083,7 +1083,7 @@ angular.module('copayApp.controllers').controller('indexController', function($r
 
       /*
     // SAT
-    if (self.spendUnconfirmed) {
+    if (configService.getSync().wallet.spendUnconfirmed) {
       self.totalBalanceBytes = balance.totalAmount;
       self.lockedBalanceBytes = balance.lockedAmount || 0;
       self.availableBalanceBytes = balance.availableAmount || 0;
@@ -1494,11 +1494,6 @@ angular.module('copayApp.controllers').controller('indexController', function($r
     $timeout(function() {
       $rootScope.$apply();
     });
-  });
-
-  $rootScope.$on('Local/SpendUnconfirmedUpdated', function(event) {
-    self.setSpendUnconfirmed();
-    self.updateAll();
   });
 
   $rootScope.$on('Local/ProfileBound', function() {

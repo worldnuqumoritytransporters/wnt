@@ -403,7 +403,7 @@ angular.module('copayApp.controllers')
 				if (isMobile.Android() || isMobile.Windows()) {
 					window.ignoreMobilePause = true;
 				}
-				window.plugins.socialsharing.shareWithOptions({message: "My wnt address " + self.protocol +  ':' + addr, subject: "My wnt address"/*, url: self.protocol +  ':' + addr*/}, function(){}, function(){});
+				window.plugins.socialsharing.shareWithOptions({message: "My Wnt address " + self.protocol +  ':' + addr, subject: "My wnt address"/*, url: self.protocol +  ':' + addr*/}, function(){}, function(){});
 			}
 		};
 
@@ -584,10 +584,8 @@ angular.module('copayApp.controllers')
 
 		// Send 
 
-
-
 		$scope.$on('$destroy', function() {
-			// unwatchSpendUnconfirmed();
+		//	unwatchSpendUnconfirmed();
 		});
 
 		this.resetError = function() {
@@ -1004,7 +1002,7 @@ angular.module('copayApp.controllers')
 						if (isTextcoin) {
 							delete self.current_payment_key;
 							indexScope.setOngoingProcess(gettext('sending'), false);
-							return self.setSendError("you can send bound payments to wnt adresses only");
+							return self.setSendError("you can send bound payments to Wnt adresses only");
 						}
 						if (!recipient_device_address)
 							throw Error('recipient device address not known');
@@ -1048,9 +1046,13 @@ angular.module('copayApp.controllers')
 								};
 							}
 							else {
+								if (self.binding.relation !== '=')
+									self.binding.feed_type = 'explicit';
+								if (self.binding.oracle_address === configService.TIMESTAMPER_ADDRESS)
+									self.binding.feed_value = parseInt(self.binding.feed_value);
 								var arrExplicitEventCondition =
 									['in data feed', [
-										[self.binding.oracle_address], self.binding.feed_name, '=', self.binding.feed_value
+										[self.binding.oracle_address], self.binding.feed_name, self.binding.relation, self.binding.feed_value
 									]];
 								var arrMerkleEventCondition =
 									['in merkle', [
@@ -1131,7 +1133,7 @@ angular.module('copayApp.controllers')
 							asset: asset,
 							do_not_email: true,
 							send_all: self.bSendAll,
-                            spend_unconfirmed: configWallet.spendUnconfirmed ? 'all' : 'own',
+							spend_unconfirmed: configWallet.spendUnconfirmed ? 'all' : 'own',
 							arrSigningDeviceAddresses: arrSigningDeviceAddresses,
 							recipient_device_address: recipient_device_address
 						};
@@ -1341,7 +1343,7 @@ angular.module('copayApp.controllers')
 				indexScope.setOngoingProcess(gettext('sending'), true);
 
 				fc.sendMultiPayment({
-                    spend_unconfirmed: configWallet.spendUnconfirmed ? 'all' : 'own',
+					spend_unconfirmed: configWallet.spendUnconfirmed ? 'all' : 'own',
 					arrSigningDeviceAddresses: arrSigningDeviceAddresses,
 					shared_address: indexScope.shared_address,
 					messages: [objMessage]
@@ -1406,6 +1408,7 @@ angular.module('copayApp.controllers')
 
 			var ModalInstanceCtrl = function($scope, $modalInstance) {
 				$scope.color = fc.backgroundColor;
+				$scope.arrRelations = ["=", ">", "<", ">=", "<=", "!="];
 				$scope.arrPublicAssetInfos = indexScope.arrBalances.filter(function(b) {
 						return !b.is_private;
 					})
@@ -1426,6 +1429,7 @@ angular.module('copayApp.controllers')
 				$scope.binding = { // defaults
 					type: fc.isSingleAddress ? 'data' : 'reverse_payment',
 					timeout: 4,
+					relation: '=',
 					reverseAsset: 'base',
 					feed_type: 'either'
 				};
@@ -1439,6 +1443,7 @@ angular.module('copayApp.controllers')
 					else {
 						$scope.binding.oracle_address = self.binding.oracle_address;
 						$scope.binding.feed_name = self.binding.feed_name;
+						$scope.binding.relation = self.binding.relation;
 						$scope.binding.feed_value = self.binding.feed_value;
 						$scope.binding.feed_type = self.binding.feed_type;
 					}
@@ -1461,6 +1466,7 @@ angular.module('copayApp.controllers')
 					else {
 						binding.oracle_address = $scope.binding.oracle_address;
 						binding.feed_name = $scope.binding.feed_name;
+						binding.relation = $scope.binding.relation;
 						binding.feed_value = $scope.binding.feed_value;
 						binding.feed_type = $scope.binding.feed_type;
 					}
@@ -1567,7 +1573,6 @@ angular.module('copayApp.controllers')
 			this.lockAmount = false;
 			this.hideAdvSend = true;
 			this.send_multiple = false;
-
 
 			this._amount = this._address = null;
 			this.bSendAll = false;
@@ -1705,7 +1710,7 @@ angular.module('copayApp.controllers')
 
 		this.openInExplorer = function(unit) {
 			var testnet = home.isTestnet ? 'testnet' : '';
-			var url = 'https://' + testnet + 'explorer.worldnuqumoritytransporters.com/#' + unit;
+			var url = 'https://' + testnet + 'wnt.worldnuqumoritytransporters.com/#' + unit;
 			if (typeof nw !== 'undefined')
 				nw.Shell.openExternal(url);
 			else if (isCordova)
