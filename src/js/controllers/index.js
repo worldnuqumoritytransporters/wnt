@@ -677,12 +677,14 @@ angular.module('copayApp.controllers').controller('indexController', function($r
     'title': gettext('History'),
     'icon': 'icon-history',
     'link': 'history'
-  }, {
-    'title': gettext('Chat'),
-    'icon': 'icon-bubble',
-    'new_state': 'correspondentDevices',
-    'link': 'chat'
-  }];
+  }
+  // , {
+  //   'title': gettext('Chat'),
+  //   'icon': 'icon-bubble',
+  //   'new_state': 'correspondentDevices',
+  //   'link': 'chat'
+  // }
+  ];
 
   self.addonViews = addonManager.addonViews();
   self.menu = self.menu.concat(addonManager.addonMenuItems());
