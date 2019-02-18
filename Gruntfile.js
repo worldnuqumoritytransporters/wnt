@@ -181,8 +181,8 @@ module.exports = function(grunt) {
       linux: {
 		options: {timestamp: true, mode: true},
         files: [
-          {expand: true, cwd: './webkitbuilds/', src: ['wnt.desktop', '../public/img/icons/logo-circle.ico', '../public/img/icons/logo-circle-256.png'], dest: '../wntbuilds/Wnt/linux32/', flatten: true, filter: 'isFile', options: {timestamp: true, mode: true} },
-          {expand: true, cwd: './webkitbuilds/', src: ['wnt.desktop', '../public/img/icons/logo-circle.ico', '../public/img/icons/logo-circle-256.png'], dest: '../wntbuilds/Wnt/linux64/', flatten: true, filter: 'isFile', options: {timestamp: true, mode: true} },
+          {expand: true, cwd: './webkitbuilds/', src: ['wnt.desktop', '../public/img/icons/logo-circle.ico', '../public/img/icons/logo-circle-256.png'], dest: '../wntbuilds/WNT/linux32/', flatten: true, filter: 'isFile', options: {timestamp: true, mode: true} },
+          {expand: true, cwd: './webkitbuilds/', src: ['wnt.desktop', '../public/img/icons/logo-circle.ico', '../public/img/icons/logo-circle-256.png'], dest: '../wntbuilds/WNT/linux64/', flatten: true, filter: 'isFile', options: {timestamp: true, mode: true} },
         ],
       }
     },
@@ -243,7 +243,7 @@ module.exports = function(grunt) {
           archive: '../wntbuilds/Wnt-linux32.zip'
         },
         expand: true,
-        cwd: '../wntbuilds/Wnt/linux32/',
+        cwd: '../wntbuilds/WNT/linux32/',
         src: ['**/*'],
         dest: 'Wnt-linux32/'
       },
@@ -252,7 +252,7 @@ module.exports = function(grunt) {
           archive: '../wntbuilds/Wnt-linux64.zip'
         },
         expand: true,
-        cwd: '../wntbuilds/Wnt/linux64/',
+        cwd: '../wntbuilds/WNT/linux64/',
         src: ['**/*'],
         dest: 'Wnt-linux64/'
       }
