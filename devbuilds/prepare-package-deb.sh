@@ -17,7 +17,7 @@ echo -e "${Green}* Preparing folders for Debian Linux distributions...${CloseCol
 if [ "$1" == "testnet" ]; then
   Type="-tn"
   ExecPost="-TN"
-  ZipFilePath='../wntbuilds/wnt-TN-wallet-linux64.zip'
+  ZipFilePath='../wntbuilds/Wnt-TN-wallet-linux64.zip'
   Action=linux64:testnet
 else
   Type=""
