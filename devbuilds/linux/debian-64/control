@@ -1,15 +1,15 @@
 Version: @version
-Source: kizunacoin@type
+Source: wnt@type
 Section: finance
 Priority: optional
-Maintainer: Kizunacoin <support@kizunacoin.net>
+Maintainer: WNT Support Team <support@wnt.main.jp>
 Build-Depends: debhelper (>=9)
 Standards-Version: 3.9.7
-Homepage: https://kizunacoin.net
+Homepage: https://worldnuqumoritytransporters.com
 #Vcs-Git: git://anonscm.debian.org/collab-maint/foo.git
 #Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/foo.git
 
-Package: kizunacoin@type
+Package: wnt@type
 Architecture: all
 Depends: ${misc:Depends}
 Description: smart DAG payments
