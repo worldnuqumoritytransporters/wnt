@@ -63,3 +63,6 @@ android-debug-fast:
 #	cp ./etc/beep.ogg ./cordova/project/plugins/phonegap-plugin-barcodescanner/src/android/LibraryProject/res/raw/beep.ogg
 	cd ../wntbuilds/project-ANDROID && cordova run android --device
 #	cd ../wntbuilds/project-ANDROID && cordova build android
+
+prepare-package-deb:
+	$(SHELLCMD) devbuilds/prepare-package-deb.sh live

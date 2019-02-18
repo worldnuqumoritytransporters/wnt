@@ -1,0 +1,16 @@
+Version: @version
+Source: kizunacoin@type
+Section: finance
+Priority: optional
+Maintainer: Kizunacoin <support@kizunacoin.net>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.7
+Homepage: https://kizunacoin.net
+#Vcs-Git: git://anonscm.debian.org/collab-maint/foo.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/foo.git
+
+Package: kizunacoin@type
+Architecture: all
+Depends: ${misc:Depends}
+Description: smart DAG payments
+

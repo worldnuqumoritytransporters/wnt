@@ -1,0 +1,11 @@
+#!/bin/sh
+cp /usr/share/Wnt@type/wnt@type.desktop /usr/share/applications/wnt@type.desktop
+for user in /home/*
+do
+  if test -d "${user}/Desktop"
+  then
+    cp /usr/share/applications/wnt.desktop ${user}/Desktop/wnt.desktop
+    chmod +x ${user}/Desktop/wnt.desktop
+    echo Copied "${user}/Desktop"
+  fi
+done

@@ -1,0 +1,5 @@
+rm -f /usr/share/applications/wnt@type.desktop
+for user in /home/*
+do
+    rm -rf ${user}/Desktop/wnt@type.desktop
+done

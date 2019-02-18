@@ -240,21 +240,21 @@ module.exports = function(grunt) {
     compress: {
       linux32: {
         options: {
-          archive: '../wntbuilds/wnt-linux32.zip'
+          archive: '../wntbuilds/Wnt-linux32.zip'
         },
         expand: true,
         cwd: '../wntbuilds/Wnt/linux32/',
         src: ['**/*'],
-        dest: 'wnt-linux32/'
+        dest: 'Wnt-linux32/'
       },
       linux64: {
         options: {
-          archive: '../wntbuilds/wnt-linux64.zip'
+          archive: '../wntbuilds/Wnt-linux64.zip'
         },
         expand: true,
         cwd: '../wntbuilds/Wnt/linux64/',
         src: ['**/*'],
-        dest: 'wnt-linux64/'
+        dest: 'Wnt-linux64/'
       }
     },
     browserify: {
@@ -282,8 +282,8 @@ module.exports = function(grunt) {
             ],
             options: {
                 maintainer: {
-                    name: 'Wnt',
-                    email: 'wnt@worldnuqumoritytransporters.com'
+                    name: 'WNT Support Team',
+                    email: 'support@wnt.main.jp'
                 },
                 long_description: 'Smart payments made simple',
                 target_architecture: 'amd64'
