@@ -244,8 +244,7 @@ module.exports = function(grunt) {
         },
         expand: true,
         cwd: '../wntbuilds/WNT/linux32/',
-        src: ['**/*'],
-        dest: 'Wnt-linux32/'
+        src: ['**/*']
       },
       linux64: {
         options: {
@@ -253,8 +252,7 @@ module.exports = function(grunt) {
         },
         expand: true,
         cwd: '../wntbuilds/WNT/linux64/',
-        src: ['**/*'],
-        dest: 'Wnt-linux64/'
+        src: ['**/*']
       }
     },
     browserify: {
