@@ -82,7 +82,7 @@ angular.module('copayApp.services').factory('configService', function(storageSer
 	},
 
 	pushNotifications: {
-	  enabled: true,
+	  enabled: false,
 	  config: {
 		android: {
 		  icon: 'push',
